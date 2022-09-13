@@ -1,9 +1,15 @@
 import React from 'react';
 
-const Post = () => {
-    return (
-        <div>
+import './Post.css'
 
+const Post = ({post:{userId,id,title,body}}) => {
+
+    return (
+        <div className={'PostBlock'}>
+            <h1>userId:{userId}</h1>
+            <h2>id:{id}</h2>
+            <p>title:{title}</p>
+            <p>body:{body}</p>
         </div>
     );
 };

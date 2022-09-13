@@ -1,0 +1,10 @@
+.commentBlock {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    margin: 20px;
+    border-radius: 10px;
+
+}

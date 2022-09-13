@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
+import './Users.css'
 import User from "../User/User";
 
 const Users = () => {
@@ -15,7 +16,7 @@ const Users = () => {
     }, []);
 
     return (
-        <div>
+        <div className={'UsersBlock'}>
             {users.map(value => <User key={value.id} user={value}/>)}
         </div>
     );

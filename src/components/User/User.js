@@ -1,29 +1,25 @@
 import React from 'react';
 
-const User = ({
-                  user:
-                      {
-                          id,
-                          name,
-                          username,
-                          email,
-                          address.street,
-                          address.suite,
-                          address.city,
-                          address.zipcode,
-                          address.geo.lat,
-                          address.geo.lng,
-                          phone,
-                          website,
-                          company.name,
-                          company.catchPhrase,
-                          company.bs
-                      }
-              }) => {
+import './User.css'
+
+const User = ({user:{id,name,username,email,address,phone,website,company}}) => {
         return (
-            <div>
-                <h1>{id}</h1>
-                <h2>{name}</h2>
+            <div className={'UserBlock'}>
+                <h2>id:{id}</h2>
+                <h3>name:{name}</h3>
+                <h3>username:{username}</h3>
+                <h4>email:{email}</h4>
+                <h4>street:{address.street}</h4>
+                <h4>suite:{address.suite}</h4>
+                <h4>city:{address.city}</h4>
+                <h4>zipcode:{address.zipcode}</h4>
+                <h4>lat:{address.geo.lat}</h4>
+                <h4>lng:{address.geo.lng}</h4>
+                <h4>phone:{phone}</h4>
+                <h4>website:{website}</h4>
+                <h4>company name:{company.name}</h4>
+                <h4>catchPhrase:{company.catchPhrase}</h4>
+                <h4>bs:{company.bs}</h4>
             </div>
         );
     }

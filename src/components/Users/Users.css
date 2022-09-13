@@ -1,0 +1,11 @@
+.UsersBlock {
+
+    width: 47.5%;
+    background: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 5px solid gold;
+    border-radius: 10px;
+}

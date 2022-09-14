@@ -1,0 +1,16 @@
+.UserBlock {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid gold;
+    border-radius: 10px;
+    width: 28%;
+    min-height: 300px;
+    row-gap: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: white;
+
+}

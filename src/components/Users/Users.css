@@ -1,0 +1,7 @@
+.UsersBlock {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    box-sizing: border-box;
+    row-gap: 30px;
+}

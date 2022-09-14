@@ -1,0 +1,9 @@
+.UserBlock {
+
+    display: flex;
+    flex-direction: column;
+    line-height: 26px;
+    row-gap: 10px;
+    color: #000000;
+    text-align: justify;
+}

@@ -15,7 +15,7 @@ const Users = () => {
 
     return (
         <div className={'UsersBlock'}>
-            {simpsons.map((value,index) => <User key={value.index} user={value}/>)}
+            {simpsons.map((value,index) => <User key={index} user={value}/>)}
         </div>
     );
 };

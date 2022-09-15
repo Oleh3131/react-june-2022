@@ -7,7 +7,7 @@ const Book = (props) => {
    let {book:{name,authors,numberOfPages,publisher,country,mediaType,released}}=props
 
     return (
-        <div>
+        <div className={'BookBlock'}>
             <h1>name: {name}</h1>
             <h2>authors: {authors}</h2>
             <h3>numberOfPages:{numberOfPages}</h3>

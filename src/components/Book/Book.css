@@ -1,0 +1,14 @@
+.BookBlock {
+    width: 45%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    line-height: 32px;
+    color: #974811;
+    border: 5px dotted #6e71e8;
+    border-radius: 12px;
+}

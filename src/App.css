@@ -1,3 +1,15 @@
+*{
+  margin:0;
+  padding: 0;
+}
+
 .App{
-  background: silver;
+
+  background: url("components/images/80619-kompyuternaya_igra-elektronika-igra-videoigra-elektronnaya_tehnika-1920x1080.jpg") fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

@@ -1,13 +1,10 @@
 
 import './UserComponent.css'
 
-const UserComponent = ({users ,loading,getUserById}) => {
+const UserComponent = ({users,getUserById}) => {
 
     const {id,name} = users;
 
-    if(loading){
-        return <h2>Loading...</h2>
-    }
     return (
         <ul className={'ulList'}>
             <li>

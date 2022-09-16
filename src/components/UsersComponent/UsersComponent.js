@@ -12,9 +12,6 @@ const UsersComponent = () => {
 
     const [user,setUser] = useState(null);
 
-// ----------useState для загрузки-----------------
-    const [loading, setLoading] = useState(false);
-
 // ----------useState для поточної сторінки котру треба відображати--------------
     const [currentPage, setCurrentPage] = useState(1);
 
@@ -23,9 +20,7 @@ const UsersComponent = () => {
 
 
     useEffect(() => {
-        setLoading(true)
         getUsers().then(value => setUsers(value.data))
-        setLoading(false)
     }, [])
 
 
@@ -34,28 +29,23 @@ const UsersComponent = () => {
     const currentUsers = users.slice(firstUserIndex, lastUserIndex)
 
     function paginate(pageNumber) {
-
         setCurrentPage(pageNumber)
-
     }
 
-
     function nextPage() {
-
-        setCurrentPage(page=>page+1)
-
+        if(currentPage <=4){
+            setCurrentPage(page=>page+1)
+        }
     }
 
     function prevPage() {
-
-        setCurrentPage(page=>page-1)
-
+        if (currentPage !== 1) {
+            setCurrentPage(page=>page-1);
+        }
     }
 
     function getUserById(id) {
-
         getUser(id).then(value =>setUser(value.data))
-
     }
 
 
@@ -66,7 +56,7 @@ const UsersComponent = () => {
 
             {user && <UserInfoComponent user={user}/>}
 
-            {currentUsers.map(value => <UserComponent key={value.id} users={value} loading={loading} getUserById={getUserById}/>)}
+            {currentUsers.map(value => <UserComponent key={value.id} users={value} getUserById={getUserById}/>)}
 
             <PaginationComponent usersPerPage={usersPerPage} totalUsers={users.length} paginate={paginate}/>
 

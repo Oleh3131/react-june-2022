@@ -1,9 +1,10 @@
 import './App.css';
+import LaunchesComponent from "./components/LaunchesComponent/LaunchesComponent";
 
 function App() {
     return (
         <div className="App">
-            Hello world!!!
+          <LaunchesComponent/>
         </div>
     );
 }

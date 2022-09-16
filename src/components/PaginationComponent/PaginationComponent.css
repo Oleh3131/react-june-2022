@@ -1,0 +1,30 @@
+.pagination {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    column-gap: 5px;
+    margin-top: 40px;
+
+}
+
+.pageItem {
+    padding: 20px;
+    border: 2px solid blue;
+}
+
+.pageItem:hover {
+    border: 2px solid red;
+    cursor: pointer;
+}
+
+.pageItem a {
+    text-decoration: none;
+    color: red;
+    font-size: 28px;
+}
+
+.pageItem:hover a {
+    text-decoration: none;
+}

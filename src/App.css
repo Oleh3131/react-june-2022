@@ -1,3 +1,17 @@
+
+*{
+  margin:0 ;
+  padding: 0;
+  background: url("./images/Cosmonauts_Painting_Art_497845_1920x1080.jpg") fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 .App{
-  background: silver;
+  color: red;
+  width: 100%;
+  height: 100%;
 }

@@ -4,7 +4,7 @@ import UsersComponent from "./components/UsersComponent/UsersComponent";
 
 function App() {
     return (
-        <div>
+        <div className={'app'}>
           <UsersComponent/>
         </div>
     );

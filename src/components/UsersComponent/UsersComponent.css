@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+.blockOfSeveralElements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    row-gap: 20px;
+    color: gold;
+    font-family: 'Britannic Bold',cursive ;
+}
+
+.blockOfSeveralElements>ul{
+    list-style-type: none;
+    font-size: 24px;
+}
+
+.buttonBlock {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    column-gap: 150px;
+}
+
+.prevPage, .nextPage {
+    width: 100px;
+    height: 30px;
+    transition: 500ms;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    color: gold;
+    background: blue;
+}
+
+.prevPage:hover, .nextPage:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    border: 2px solid red;
+    color: red;
+}

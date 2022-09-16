@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './PaginationComponent.css'
+
 const PaginationComponent = ({usersPerPage,totalUsers,paginate}) => {
 
     // відмальовуємо загальну кількість кнопок
@@ -12,12 +14,12 @@ const PaginationComponent = ({usersPerPage,totalUsers,paginate}) => {
     }
 
     return (
-        <div>
+        <div className={'blockOfPagination'}>
             <ul className={'pagination'}>
                 {
                     pageNumbers.map(number => (
-                        <li className={'pageItem'} key={number}>
-                            <a href="!#" className="pageLink" onClick={()=>paginate(number)}>
+                        <li className={'pageItem'} key={number} onClick={()=>paginate(number)}>
+                            <a href="#" className="pageLink">
                                 {number}
                             </a>
                         </li>

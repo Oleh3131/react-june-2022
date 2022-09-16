@@ -1,12 +1,16 @@
 import React, {useEffect, useState} from 'react';
 
-import {getUsers} from "../../services/user.service";
+import {getUser, getUsers} from "../../services/user.service";
 import PaginationComponent from "../PaginationComponent/PaginationComponent";
 import UserComponent from "../UserComponent/UserComponent";
+import './UsersComponent.css'
+import UserInfoComponent from "../UserInfoComponent/UserInfoComponent";
 
 const UsersComponent = () => {
 
     const [users, setUsers] = useState([]);
+
+    const [user,setUser] = useState(null);
 
 // ----------useState для загрузки-----------------
     const [loading, setLoading] = useState(false);
@@ -48,17 +52,29 @@ const UsersComponent = () => {
 
     }
 
+    function getUserById(id) {
+
+        getUser(id).then(value =>setUser(value.data))
+
+    }
+
 
     return (
-        <div>
+        <div className={'blockOfSeveralElements'}>
+
             <h1>Users</h1>
 
-            {currentUsers.map(value => <UserComponent key={value.id} users={value} loading={loading}/>)}
+            {user && <UserInfoComponent user={user}/>}
+
+            {currentUsers.map(value => <UserComponent key={value.id} users={value} loading={loading} getUserById={getUserById}/>)}
 
             <PaginationComponent usersPerPage={usersPerPage} totalUsers={users.length} paginate={paginate}/>
 
-            <button className="prevPage" onClick={()=>prevPage()}>Previous page</button>
-            <button className="nextPage" onClick={()=>nextPage()}>Next page</button>
+            <div className={'buttonBlock'}>
+                <button className="prevPage" onClick={()=>prevPage()}>Previous page</button>
+                <button className="nextPage" onClick={()=>nextPage()}>Next page</button>
+            </div>
+
         </div>
     );
 };

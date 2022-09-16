@@ -1,0 +1,16 @@
+.blockOfUserInfo {
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 5px solid gold;
+    border-radius: 10px;
+}
+
+.blockOfUserInfo ul {
+
+    margin-left: 40px;
+
+}

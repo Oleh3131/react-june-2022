@@ -4,15 +4,19 @@ import './BannerComponent.css'
 
 const BannerComponent = ({banner}) => {
 
-    const {devName, name, description, fullUsageRights, images} = banner;
+    const {devName, name, description, images} = banner;
 
     return (
-        <div>
-            <h2>devName: {devName}</h2>
-            <h3>name: {name}</h3>
-            <p>description: {description}</p>
-            <h5>full usage rights: {fullUsageRights}</h5>
+        <div className={"bannerBlock"}>
+
+            <div className={'elementsOfBannerBlock'}>
+                <h2>devName: {devName}</h2>
+                <h3>name: {name}</h3>
+                <p>description: {description}</p>
+            </div>
+
             <img src={images.smallIcon} alt={name}/>
+
         </div>
     );
 };

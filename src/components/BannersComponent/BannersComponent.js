@@ -12,7 +12,7 @@ const BannersComponent = () => {
 
     const [currentPage, setCurrentPage] = useState(1);
 
-    const [numberOfBasicPages] = useState(10);
+    const [numberOfBasicPages] = useState(12);
 
     useEffect(() => {
 
@@ -24,21 +24,26 @@ const BannersComponent = () => {
     const firstIndexPage = lastIndexPage - numberOfBasicPages;
     const currentIndexPage = banners.slice(firstIndexPage, lastIndexPage)
 
-    function paginate(pageNumber){
+    function paginate(pageNumber) {
 
         setCurrentPage(pageNumber)
 
     }
 
-
     return (
-        <div>
+        <div className={'mainBannersBlock'}>
             <h1>Banners</h1>
 
-            {currentIndexPage.map(value => <BannerComponent key={value.id} banner={value}/>)}
+            <div className={'bannersBlock'}>
+                {currentIndexPage.map(value => <BannerComponent key={value.id} banner={value}/>)}
+            </div>
 
-            <PaginationComponent numberOfBasicPages={numberOfBasicPages} totalPages={banners.length} paginate={paginate}/>
-
+            <PaginationComponent
+                numberOfBasicPages={numberOfBasicPages}
+                totalPages={banners.length}
+                paginate={paginate}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}/>
         </div>
     );
 };

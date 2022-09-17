@@ -1,0 +1,22 @@
+.bannerBlock{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    column-gap: 20px;
+    padding: 10px;
+
+}
+
+.elementsOfBannerBlock {
+    display: flex;
+    flex-direction: column;
+    line-height: 26px;
+}
+
+.bannerBlock>img {
+
+    border-radius: 20%;
+
+}

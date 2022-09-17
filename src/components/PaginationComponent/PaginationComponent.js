@@ -46,7 +46,7 @@ const PaginationComponent = ({
 let width = 45; // ширина картинки
 let count = 7; // видима кількість зображень
 //
-    const ulList = document.getElementsByClassName("ulList")[0];
+    let ulList = document.getElementsByClassName("ulList")[0];
 
 
 let position = 0; // положення стрічки прокручування
@@ -58,6 +58,7 @@ let position = 0; // положення стрічки прокручуванн�
         position += width * count;
         // останній рух вліво може бути не на 3, а на 2 або 1 елемент
         position = Math.min(position, 0);
+        console.log(position)
         pageItem.style.marginLeft = position + 'px';
 
     }
@@ -69,6 +70,7 @@ let position = 0; // положення стрічки прокручуванн�
         //останній рух праворуч може бути не на 3, а на 2 або 1 елемент
         position = Math.max(position, -width * (ulList.length - count));
         pageItem.style.marginLeft = position + 'px';
+
 
     }
 

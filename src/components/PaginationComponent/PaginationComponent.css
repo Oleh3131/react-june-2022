@@ -26,15 +26,15 @@
     position: absolute;
     margin-right: -420px;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 .ulBlock {
 
     display: flex;
     align-items: center;
-    width: 345px;
+    width: 315px;
     height: 80px;
-    padding: 10px;
     border: 3px solid red;
     box-sizing: border-box;
     position: relative;
@@ -45,7 +45,6 @@
 .ulList {
     display: flex;
     list-style-type: none;
-    column-gap: 10px;
     position: absolute;
 }
 

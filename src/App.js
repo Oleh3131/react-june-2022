@@ -7,8 +7,9 @@ import FirstFormComponentExample
 function App() {
     return (
         <div className="App">
-           <FirstFormComponentExample/>
-           <SecondFormComponentExample/>
+           {/*<FirstFormComponentExample/>*/}
+           {/*<SecondFormComponentExample/>*/}
+
         </div>
     );
 }

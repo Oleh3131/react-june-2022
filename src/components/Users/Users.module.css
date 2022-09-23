@@ -1,0 +1,7 @@
+.usersBlock {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    row-gap: 40px;
+    box-sizing: border-box;
+}

@@ -3,7 +3,7 @@ import React from 'react';
 import css from './CarComponent.module.css'
 import {carService} from "../../services";
 
-const CarComponent = ({car,setCars}) => {
+const CarComponent = ({car,setCars,setUpdateCar}) => {
 
     const {id,model,price,year} = car;
 
@@ -24,13 +24,6 @@ const CarComponent = ({car,setCars}) => {
         });
     }
 
-    function updateCar() {
-
-        carService.updateById(id,car).then((value)=>setCars(cars=>{
-            cars.findIndex(value => value.id === id);
-        }))
-
-    }
 
     return (
         <div>
@@ -39,7 +32,7 @@ const CarComponent = ({car,setCars}) => {
             <h4>price: {price}</h4>
             <h4>year: {year}</h4>
             <div className={css.ButtonsBlock}>
-                <button onClick={updateCar}>Update</button>
+                <button onClick={()=>setUpdateCar(car)}>Update</button>
                 <button onClick={deleteCar}>Delete</button>
             </div>
         </div>

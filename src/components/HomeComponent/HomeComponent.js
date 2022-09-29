@@ -1,7 +1,6 @@
 import React from 'react';
 
 import image from '../../images/Best-Website-Welcome-Message-Examples.png'
-
 import style from './HomeComponent.module.css'
 
 const HomeComponent = () => {

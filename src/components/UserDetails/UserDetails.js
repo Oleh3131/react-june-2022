@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 
 import {userService} from "../../services";
+import style from './UserDetails.module.css'
 
 const UserDetails = () => {
 
@@ -17,7 +18,7 @@ const UserDetails = () => {
 
     return (
         <div>
-            {user && <div>
+            {user && <div className={style.userInfo}>
                 <h2>id: {user.id}</h2>
                 <h3>name: {user.name}</h3>
                 <h3>username: {user.username}</h3>

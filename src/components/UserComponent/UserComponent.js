@@ -1,6 +1,7 @@
 import React from 'react';
 import {useNavigate} from "react-router-dom";
 
+import style from './UserComponent.module.css'
 
 const UserComponent = ({user}) => {
 
@@ -9,7 +10,7 @@ const UserComponent = ({user}) => {
     const navigatator = useNavigate();
     
     return (
-        <div>
+        <div className={style.userBlock}>
            <h2>id: {id}</h2>
            <h4>name: {name}</h4>
            <h4>username: {username}</h4>

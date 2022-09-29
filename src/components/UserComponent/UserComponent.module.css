@@ -1,0 +1,26 @@
+.userBlock{
+    width: 23.5%;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.userBlock button {
+
+    width: 100px;
+    height: 25px;
+    border: 2px solid yellow;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 12px;
+    color: gold;
+
+}
+.userBlock button:hover {
+
+    color: red;
+
+}

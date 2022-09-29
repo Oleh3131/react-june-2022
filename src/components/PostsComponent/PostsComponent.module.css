@@ -1,4 +1,4 @@
-.usersBlock {
+.postsBlock {
 
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
 
 }
 
-.usersBlockInfo {
+.postsBlockInfo {
 
     display: flex;
     flex-wrap: wrap;

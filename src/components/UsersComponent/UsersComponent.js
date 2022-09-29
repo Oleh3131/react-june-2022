@@ -8,21 +8,24 @@ import style from './Users.module.css'
 
 const UsersComponent = () => {
 
-    const [users,setUsers] = useState([]);
+    const [users, setUsers] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
 
-        userService.getAll().then(({data})=>setUsers(data))
+        userService.getAll().then(({data}) => setUsers(data))
 
-    },[])
+    }, [])
 
     return (
         <div className={style.usersBlock}>
-            {users.length?users.map(user=><UserComponent key={user.id} user={user}/>):
-                <h1>Loading...</h1>}
-            <div>
-                <Outlet/>
+
+            <div className={style.usersBlockInfo}>
+                {users.length ? users.map(user => <UserComponent key={user.id} user={user}/>) :
+                    <h1>Loading...</h1>}
             </div>
+
+            <Outlet/>
+            
         </div>
     );
 };

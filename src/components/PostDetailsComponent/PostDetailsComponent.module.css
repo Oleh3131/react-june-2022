@@ -1,0 +1,10 @@
+.postInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    color: gold;
+}

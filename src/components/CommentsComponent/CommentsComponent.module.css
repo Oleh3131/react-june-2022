@@ -1,15 +1,4 @@
-.usersBlock {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    border-radius: 12px;
-
-}
-
-.usersBlockInfo {
+.postsBlockInfo{
 
     display: flex;
     flex-wrap: wrap;
@@ -18,8 +7,8 @@
     padding-bottom: 30px;
     justify-content: center;
     align-items: center;
-    column-gap: 10px;
-    row-gap: 10px;
+    column-gap: 15px;
+    row-gap: 15px;
     height: 100%;
     color: gold;
     border-radius: 12px;

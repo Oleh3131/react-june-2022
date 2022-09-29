@@ -1,0 +1,14 @@
+.albumsBlockInfo{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+    row-gap: 15px;
+    height: 100%;
+    color: gold;
+    border-radius: 12px;
+}

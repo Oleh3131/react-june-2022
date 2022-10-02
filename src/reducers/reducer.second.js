@@ -1,5 +1,7 @@
 import React, {useReducer} from 'react';
 
+import css from './reducer.module.css'
+
 const ReducerSecond = () => {
 
     function initialValue(value) {
@@ -46,23 +48,44 @@ const ReducerSecond = () => {
     const [state, dispatch] = useReducer(reducer, 0, initialValue);
 
     return (
-        <div>
+        <div className={css.ButtonBlock}>
 
-            <h2>FirstValue:{state.a}</h2>
-            <button onClick={()=>dispatch({type:'firstIncrement'})}>First increment</button>
-            <button onClick={()=>dispatch({type:'firstDecrement'})}>First decrement</button>
+            <div className={css.ButtonBlockFirst}>
+                <h2>FirstValue:{state.a}</h2>
+
+                <span className={css.First}>
+                     <button onClick={() => dispatch({type: 'firstIncrement'})}>First increment</button>
+                <button onClick={() => dispatch({type: 'firstDecrement'})}>First decrement</button>
+                </span>
+
+
+            </div>
 
             <hr/>
 
-            <h2>SecondValue:{state.b}</h2>
-            <button onClick={()=>dispatch({type:'secondIncrement'})}>Second increment</button>
-            <button onClick={()=>dispatch({type:'secondDecrement'})}>Second decrement</button>
+            <div className={css.ButtonBlockSecond}>
+                <h2>SecondValue:{state.b}</h2>
+
+                <span className={css.Second}>
+                     <button onClick={() => dispatch({type: 'secondIncrement'})}>Second increment
+                </button>
+                <button onClick={() => dispatch({type: 'secondDecrement'})}>Second decrement
+                </button>
+                </span>
+
+            </div>
 
             <hr/>
 
-            <h2>ThirdValue:{state.c}</h2>
-            <button onClick={()=>dispatch({type:'thirdIncrement'})}>Third increment</button>
-            <button onClick={()=>dispatch({type:'thirdDecrement'})}>Third decrement</button>
+            <div className={css.ButtonBlockThird}>
+                <h2>ThirdValue:{state.c}</h2>
+
+                <span className={css.Third}>
+                    <button onClick={() => dispatch({type: 'thirdIncrement'})}>Third increment</button>
+                <button onClick={() => dispatch({type: 'thirdDecrement'})}>Third decrement</button>
+                </span>
+
+            </div>
 
         </div>
     );

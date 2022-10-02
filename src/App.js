@@ -1,9 +1,10 @@
 import './App.css';
+import ReducerFirst from "./reducer/reducer.first";
 
 function App() {
     return (
         <div className="App">
-            Hello world!!!
+           <ReducerFirst/>
         </div>
     );
 }

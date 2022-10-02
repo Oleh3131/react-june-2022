@@ -36,10 +36,11 @@ const ReducerSecond = () => {
 
                 return {...state, c: state.c - 10};
 
+            default:
+
+                return state
+
         }
-
-        return {...state}
-
     }
 
     const [state, dispatch] = useReducer(reducer, 0, initialValue);

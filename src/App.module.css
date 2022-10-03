@@ -1,0 +1,9 @@
+.App{
+  background: silver;
+}
+
+.FormBlock{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}

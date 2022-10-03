@@ -1,9 +1,12 @@
-import './App.css';
+import './App.module.css';
+
+import css from './App.module.css'
+import {ReducerFirst} from "./reducers";
 
 function App() {
     return (
-        <div className="App">
-            Hello world!!!
+        <div className={css.App}>
+            <ReducerFirst/>
         </div>
     );
 }

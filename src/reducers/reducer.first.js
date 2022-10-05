@@ -1,47 +1,50 @@
 import React, {useReducer} from 'react';
+
 import css from "../App.module.css";
 import CatFormComponent from "../components/CatFormComponent";
 import DogFormComponent from "../components/DogFormComponent";
 
-function stateFunction(initialValue) {
-
-
-    return {cats: initialValue, dogs: initialValue}
-
-}
-
-function reducer(state, action) {
-
-    if (action.type === 'dogName') {
-
-        console.log(action.payload)
-
-    }
-
-}
-
-const useReducer2 =()=>useReducer(reducer, [], stateFunction);
 
 const ReducerFirst = () => {
 
-    return (
+    function reducer(state, action) {
 
-        <div>
+        switch (action.type) {
 
-            <div className={css.FormBlock}>
-                <CatFormComponent/> }/>
-                <DogFormComponent/>
-            </div>
+            case 'dogName':
 
+                return {...state, dogs: [...state.dogs,{name: action.payload, id: new Date.now()}]}
+
+            case 'deleteDog':
+
+                return {...state, dogs: state.dogs.filter(dog => dog.id !== action.payload)}
+            default:
+
+                return state;
+        }
+    }
+
+
+        const [state, dispatch] = useReducer(reducer, {cats: [], dogs: []});
+
+        return (
             <div>
-                {/*<p>{state.dogs}</p>*/}
+
+                <div className={css.FormBlock}>
+                    {/*<CatFormComponent/>*/}
+                    <DogFormComponent dispatch={dispatch}/>
+                </div>
+
+                <div>
+                    {state.dogs.map(dog => (<div key={dog.id}>{dog.name}</div>))}
+                </div>
+
             </div>
+        );
+    };
 
-        </div>
-    );
-};
+    export default ReducerFirst;
 
-export {
-    ReducerFirst,
-    useReducer2
-}
+
+
+

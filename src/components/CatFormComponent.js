@@ -2,15 +2,15 @@ import React from 'react';
 import {useForm} from "react-hook-form";
 
 
-const CatFormComponent = () => {
+const CatFormComponent = ({dispatch}) => {
 
 
     const {register, handleSubmit, reset} = useForm({mode: "all"});
 
 
-    function submit(animal) {
+    function submit({catName}) {
 
-        console.log(animal)
+        dispatch({type:'catName',payload:catName})
 
         reset()
     }
@@ -21,7 +21,7 @@ const CatFormComponent = () => {
             <div>
                 <h4>Add cat:</h4>
                 <input type="text" placeholder={'name'} {...register('catName')}/>
-                <button>Save</button>
+                <button onClick={()=>submit}>Save</button>
             </div>
         </form>
 

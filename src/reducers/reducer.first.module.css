@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    background: cornflowerblue;
+}
+
+.FormBlock{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.MainCatsAndDogsBlock{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.MainDogBlock{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.DogBlock{
+    display: flex;
+    flex-direction: row;
+}

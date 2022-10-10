@@ -1,0 +1,38 @@
+.PostBlock {
+    width: 20%;
+    color: gold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    line-height: 24px;
+    row-gap: 15px;
+}
+
+.Button {
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    border: 2px solid yellow;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.Button:hover {
+   transform: scale(1.1);
+}
+
+.Button>a{
+
+    text-decoration: none;
+    color: gold;
+    transition: 500ms;
+}
+
+.Button>a:hover{
+
+    color: red;
+
+}

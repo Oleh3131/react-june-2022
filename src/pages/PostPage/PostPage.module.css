@@ -1,0 +1,10 @@
+.MainPostBlock {
+
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 40px;
+    justify-content: center;
+    align-items: center;
+}

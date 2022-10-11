@@ -4,6 +4,9 @@ import {useDispatch} from "react-redux";
 
 import {userActions} from "../../redux";
 import {userService} from "../../services";
+import firstImg from '../../images/11.jpg'
+import secondImg from '../../images/22.jpg'
+import thirdImg from '../../images/33.jpg'
 
 
 const FormComponent = () => {
@@ -25,6 +28,16 @@ const FormComponent = () => {
             <input type="text" placeholder={'first name'} {...register('first_name')}/>
             <input type="text" placeholder={'last name'} {...register('last_name')}/>
             <input type="email" placeholder={'email'} {...register('email')}/>
+            {/*<select>*/}
+            {/*    <option value={firstImg} {...register('avatar')}>1</option>*/}
+            {/*    <option value={secondImg} {...register('avatar')}>2</option>*/}
+            {/*    <option value={thirdImg} {...register('avatar')}>3</option>*/}
+            {/*</select>*/}
+            <select>
+                <option value={firstImg} {...register('avatar')}>1</option>
+                <option value={secondImg} {...register('avatar')}>2</option>
+                <option value={thirdImg} {...register('avatar')}>3</option>
+            </select>
             <button>SaveInfo</button>
         </form>
     );

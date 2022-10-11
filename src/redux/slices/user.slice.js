@@ -19,7 +19,7 @@ const userSlice = createSlice({
 
           const user = action.payload.user;
 
-          state.users.push(user);
+          state.users.push({...user,id:action.payload.id});
 
       }
     },
@@ -61,7 +61,7 @@ const getAll = createAsyncThunk(
 
 
 
-const {reducer:userReducer,actions:createUser} = userSlice;
+const {reducer:userReducer,actions: {createUser}} = userSlice;
 
 const userActions={
     getAll,

@@ -3,19 +3,18 @@ import {useForm} from "react-hook-form";
 import {useDispatch} from "react-redux";
 
 import {userActions} from "../../redux";
+import {userService} from "../../services";
 
 
 const FormComponent = () => {
 
-    const {register, handleSubmit, reset, setValue} = useForm({mode: "all"});
+    const {register, handleSubmit, reset} = useForm({mode: "all"});
 
     const dispatch = useDispatch();
 
     function submit(user) {
 
-        console.log(user)
-
-        dispatch(userActions.createUser({user}));
+        userService.create({user}).then(({data}) => dispatch(userActions.createUser(data)));
 
         reset()
 

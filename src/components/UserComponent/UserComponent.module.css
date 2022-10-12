@@ -1,0 +1,22 @@
+.UserBlock{
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.UserBlock img{
+    width: 150px;
+    height: 150px;
+}
+
+.Content{
+    display: flex;
+    flex-direction: column;
+}
+
+.Buttons{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}

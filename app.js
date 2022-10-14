@@ -1,7 +1,6 @@
-import {ISpaceXMission, IUser} from "./interfaces";
-
-
-const mission:ISpaceXMission={
+"use strict";
+exports.__esModule = true;
+var mission = {
     mission_name: "Starlink-15 (v1.0)",
     launch_date_local: "2020-10-24T11:31:00-04:00",
     launch_site: {
@@ -34,25 +33,18 @@ const mission:ISpaceXMission={
             ]
         }
     }
+};
+var user = { name: "Max", age: 18, gender: 'male' };
+function sum(a, b) {
+    return a + b;
 }
-
-
-const user: IUser = {name: "Max", age: 18, gender: 'male'};
-
-function sum(a:number,b:number):number{
-    return a+b
-}
-
-function showSum(a:number,b:number):void{
+function showSum(a, b) {
     console.log(a + b);
 }
-
-function incAge(someUser:IUser, inc:number):IUser{
-    someUser.age+=inc
-    return someUser
+function incAge(someUser, inc) {
+    someUser.age += inc;
+    return someUser;
 }
-
 console.log(sum(1, 2));
 showSum(2, 3);
 incAge(user, 2);
-

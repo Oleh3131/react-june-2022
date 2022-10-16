@@ -17,15 +17,16 @@
 
 // ---------------------------------ДРУГИЙ ВАРІАНТ--------------------------------
 
-import {useLocation} from "react-router-dom";
 
-interface IState<T>{
+
+import {useLocation,Location} from "react-router-dom";
+
+interface IState<T> extends Location{
     state: T
 }
 
-type LocationType<S> = ReturnType<typeof useLocation & IState<S>>;
 
-const useAppLocation = <State>(): LocationType<State> => useLocation();
+const useAppLocation = <State>(): IState<State> => useLocation();
 
 export {
     useAppLocation
